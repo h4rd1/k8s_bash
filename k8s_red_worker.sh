@@ -53,9 +53,9 @@ gpgkey=https://pkgs.k8s.io/core:/stable:/v1.28/rpm/repodata/repomd.xml.key
 exclude=kubelet kubeadm kubectl cri-tools kubernetes-cni
 EOF
 
-
+dnf remove -y runc containerd
 dnf update -y
-dnf install -y kubernetes kubernetes-kubeadm cri-tools tc ipvsadm ebtables socat conntrack git curl wget runc containerd --disableexcludes=kubernetes
+dnf install -y kubernetes kubernetes-kubeadm cri-o cri-tools tc ipvsadm ebtables socat conntrack git curl wget  --disableexcludes=kubernetes
 dnf clean all
 iptables -P FORWARD ACCEPT
 #sed -i 's/SystemdCgroup \= false/SystemdCgroup \= true/g' /etc/containerd/config.toml
