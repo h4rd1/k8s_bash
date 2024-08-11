@@ -1,6 +1,8 @@
  Полезные для работы команды:
 
     kubectl delete node <имя_ноды> - удалить ноду;
+    
+    kubectl get nodes - посмотреть детальную информацию о количестве нод в кластере и их роли;
 
     kubectl exec -it nginx -- /bin/bash - выполнить вход в виртуальную консоль;
 
@@ -15,6 +17,9 @@
     kubectl get pod -n kube-system - проверка старта всех систем k8s;
 
     kubectl run nginx --image=nginx - создание пода nginx;
+
+    kubectl get pod -o wide - посмотреть детальную информацию о поде;
+    
    
 
 
