@@ -23,7 +23,9 @@
 
     kubectl get pod -o wide - посмотреть детальную информацию о поде;
     
-   
+
+   ![изображение](https://github.com/user-attachments/assets/c3adb115-e657-4ee7-bfc0-2ed43857445c)
+
 
 
 
