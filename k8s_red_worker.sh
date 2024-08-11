@@ -59,6 +59,7 @@ dnf install -y kubernetes kubernetes-kubeadm cri-o cri-tools tc ipvsadm ebtables
 dnf clean all
 iptables -P FORWARD ACCEPT
 #sed -i 's/SystemdCgroup \= false/SystemdCgroup \= true/g' /etc/containerd/config.toml
-systemctl enable --now containerd
+#systemctl enable --now containerd
+systemctl enable --now cri-o
 systemctl enable --now kubelet
 
