@@ -2,7 +2,7 @@
 #-----------------------------------------------------------------
 # Скрипт для автоматической настройки Kubernetes и CRI-O
 # Версия Kubernetes: 1.28
-# Версия CRI-O: 1.23
+# Версия CRI-O: 1.26
 #-----------------------------------------------------------------
 
 # Установить имя хоста для Kubernetes Master
@@ -36,7 +36,7 @@ modprobe br_netfilter
 iptables -P FORWARD ACCEPT
 
 # Установка CRI-O
-export VERSION=1.23
+export VERSION=1.26
 curl -L -o /etc/dnf.repos.d/devel:kubic:libcontainers:stable.repo https://download.opensuse.org/repositories/devel:/kubic:/libcontainers:/stable/CentOS_8/devel:kubic:libcontainers:stable.repo
 curl -L -o /etc/dnf.repos.d/devel:kubic:libcontainers:stable:cri-o:$VERSION.repo https://download.opensuse.org/repositories/devel:kubic:libcontainers:stable:cri-o:$VERSION/CentOS_8/devel:kubic:libcontainers:stable:cri-o:$VERSION.repo
 dnf install -y cri-o
