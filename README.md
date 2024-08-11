@@ -8,11 +8,14 @@
 
     kubectl get pod -o wide - детальная информация о подах;
 
-    kubectl get service --all-namespaces - подробная информация о сервисах.
+    kubectl get service --all-namespaces - подробная информация о сервисах;
 
-    kubeadm token create --print-join-command  - токен для подключения 
+    kubeadm token create --print-join-command  - токен для подключения;
 
-    kubectl get pod -n kube-system - проверка старта всех систем k8s
+    kubectl get pod -n kube-system - проверка старта всех систем k8s;
+
+    kubectl run nginx --image=nginx - создание пода nginx;
+   
 
 
 
