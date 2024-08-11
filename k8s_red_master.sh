@@ -33,6 +33,7 @@ EOF
 sysctl --system
 modprobe overlay
 modprobe br_netfilter
+iptables -P FORWARD ACCEPT
 
 # Установка CRI-O
 export VERSION=1.23
