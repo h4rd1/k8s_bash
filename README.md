@@ -24,7 +24,11 @@
     kubectl get pod -o wide - посмотреть детальную информацию о поде;
 
     kubectl config set-context --current --namespace=awx - смена контекста;
-    
+
+
+
+Если не работает скрипт необходимо воспользоваться утилитой dos2unix
+
 
    ![изображение](https://github.com/user-attachments/assets/c3adb115-e657-4ee7-bfc0-2ed43857445c)
 
